@@ -3,7 +3,33 @@ Cascade OMR is an Optical Music Recognition System using Cascade Classifier to d
 
 # Description
 In this project, we explore techniques and algorithms to implement optical music recognition. This paper aims to encourage people who just begin and enjoy learning object detection by using a simple and comprehensible framework called Haar-like Feature to detect the music notation and generate musical alphabets to assist those who have a difficult time in memorizing it. The paper will include the process of how to generate the cascade classifier model and how to imply them to detect the target object.
-The limitation of this project digital sheet which have a good resolution (above 720p) to obtain a high accuracy rate, and handwritten sheets are excluded.
+
+# Installation
+In this project, we are using Flask Application, and the installation is use pip to install all the library.
+To install, run:
+```bash
+pip3 install -r requirements.txt
+```
+
+# Usage
+
+Run the application by:
+
+```bash
+flask run --host=0.0.0.0
+```
+
+The application provide 2 choices:
+- See the existing example sheet that the application provide
+- Upload sheet music as pdf or any image file formats
+![home](https://user-images.githubusercontent.com/49471123/116553204-13246080-a924-11eb-9023-8830d729f386.jpg)
+![sheetCollections](https://user-images.githubusercontent.com/49471123/116553213-17507e00-a924-11eb-915e-3de62374154c.jpg)
+![test1](https://user-images.githubusercontent.com/49471123/116553218-191a4180-a924-11eb-9ff0-9bcc48bf8714.jpg)
+![test2](https://user-images.githubusercontent.com/49471123/116553235-1c153200-a924-11eb-8d63-916bebb639af.jpg)
+![test3](https://user-images.githubusercontent.com/49471123/116553248-1f102280-a924-11eb-914b-7e5c8ed6f5bb.jpg)
+
+# Technique & Methods
+The limitation of this project is to detect digital sheet which have a good resolution (above 720p) to obtain a high accuracy rate, and handwritten sheets are excluded.
 In this project, the whole system is build from scatch include the classifier models. The Cascade OMR architecture are divide into 4 parts.
 
 ## 1. Pre-image processing
@@ -78,28 +104,4 @@ However, we also encounter some problems with sheet music that has a resolution 
 Once we get the optimal resolution (≥1080p), we keep on testing the note detection and recognition.  In total, we tested approximately 2,325 music notes, which the result is shown in below From the table, we can see that 2,283 notes are detected out of 2,325 notes, which reach up to 98.19% of the total notes. For the accuracy rate, according to Table below, the system is able to determine the pitch alphabet around 2,272 correctly out of 2,283, which brings up to 99.56% high. 
 
 ![Screenshot (194)](https://user-images.githubusercontent.com/49471123/116553498-61d1fa80-a924-11eb-8ea8-a0c27cebdf78.png)
-
-# Installation
-In this project, we are using Flask Application, and the installation is use pip to install all the library.
-To install, run:
-```bash
-pip3 install -r requirements.txt
-```
-
-# Usage
-
-Run the application by:
-
-```bash
-flask run --host=0.0.0.0
-```
-
-The application provide 2 choices:
-- See the existing example sheet that the application provide
-- Upload sheet music as pdf or any image file formats
-![home](https://user-images.githubusercontent.com/49471123/116553204-13246080-a924-11eb-9023-8830d729f386.jpg)
-![sheetCollections](https://user-images.githubusercontent.com/49471123/116553213-17507e00-a924-11eb-915e-3de62374154c.jpg)
-![test1](https://user-images.githubusercontent.com/49471123/116553218-191a4180-a924-11eb-9ff0-9bcc48bf8714.jpg)
-![test2](https://user-images.githubusercontent.com/49471123/116553235-1c153200-a924-11eb-8d63-916bebb639af.jpg)
-![test3](https://user-images.githubusercontent.com/49471123/116553248-1f102280-a924-11eb-914b-7e5c8ed6f5bb.jpg)
 
