@@ -1,0 +1,13 @@
+{%extends 'base.html'%} {% block body %}
+<div class="detailScales">
+  <a href="/group"
+    ><img src="/static/img/app/back.png" alt="Back" class="back"
+  /></a>
+  <div class="title">{{sheets[0]['title']}}</div>
+  {%for sheet in sheets%}
+  <a class="sheets" href="{{'/uploadComp/'+sheet.path }}"
+    >{{sheet.fileNames}}</a
+  >
+  {%endfor%}
+</div>
+{% endblock %}

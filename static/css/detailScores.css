@@ -1,0 +1,12 @@
+.detailScales {
+  display: flex;
+  flex-direction: column;
+}
+.detailScales .sheets {
+  font-size: 28px;
+  padding: 20px;
+  margin: 15px;
+  background: #dcc133;
+  border-radius: 10px;
+  font-family: mukta;
+}

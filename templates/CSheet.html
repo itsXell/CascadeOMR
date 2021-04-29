@@ -1,0 +1,96 @@
+{%extends 'base.html'%} {% block head %}
+<script>
+  var source = new EventSource("/progress");
+  var last = new EventSource("/lastNote");
+  last.onmessage = function (event) {
+    var total = event.data;
+    $(".progress-bar").css("width", total + "%");
+    console.log("TOTALA", total);
+    if (total >= 100) {
+      source.close();
+      last.close();
+      $(".progress").css("display", "none");
+      $("#dAll").css("display", "flex");
+    }
+  };
+  source.onmessage = function (event) {
+    var curr = event.data;
+    console.log("CURR Load", event.data);
+    $(".progress-bar-label").text(curr);
+    $(".progress-bar").attr("aria-valuenow", curr);
+  };
+</script>
+{% endblock %} {% block body %}
+<div class="major">
+  <div class="bg-fake-sheet">
+    <a href="/backGroup" class="back sheet-bk">
+      <img
+        src="{{ url_for('static', filename='./img/app/back2.png') }}"
+        alt="Back"
+        class="left-arr"
+      />
+      <div class="home">Sheets</div>
+    </a>
+    <div class="sheetPaper">
+      <img
+        src="{{url_for('static', filename=imgData.resultPaths[imgData.ind])}}"
+        alt="Sheet Musi"
+        class="sheetInnerPp"
+      />
+    </div>
+    <div class="backNF">
+      <div class="progress" style="width: 50%">
+        <div
+          class="progress-bar progress-bar-striped active"
+          role="progressbar"
+          aria-valuenow="0"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 0%"
+        >
+          <span class="progress-bar-label">0%</span>
+        </div>
+      </div>
+      <div class="backInner">
+        <div class="pre-skin">
+          {% if imgData.singleOrNot == False %} {% if imgData.ind != 0 %}
+          <a class="f next-sheet prev-sheet" href="/upload/b"
+            ><img
+              src="{{ url_for('static', filename='./img/app/left-arr.png') }}"
+              alt="Back"
+              class="arr next-sheet"
+            />
+            <div class="download next-sheet">Previous</div>
+          </a>
+          {% endif %} {% endif %}
+        </div>
+
+        <div>
+          <a class="f" id="dAll" href="/dAll"
+            ><img
+              src="{{ url_for('static', filename='./img/app/download.png') }}"
+              alt="Back"
+              class="down"
+            />
+            <div class="download">Download</div>
+          </a>
+        </div>
+
+        <div class="next-skin">
+          {% if imgData.singleOrNot == False %} {% if imgData.ind < imgData.path
+          |length -1%}
+          <a class="f next-sheet" href="/upload/f">
+            <div class="download next-sheet">Next</div>
+            <img
+              src="{{ url_for('static', filename='./img/app/right-arr.png') }}"
+              alt="Back"
+              class="arr"
+            />
+          </a>
+          {% endif %} {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

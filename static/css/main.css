@@ -1,0 +1,152 @@
+html,
+body {
+  margin: 0;
+  font-family: sans-serif;
+  height: 100%;
+  background-image: url("p.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.left-arr {
+  width: 50px;
+}
+.home-icon {
+  width: 42px;
+  padding: 1px;
+  margin: 2px;
+}
+.back {
+  width: 120px;
+  position: absolute;
+  top: 60px;
+  left: 80px;
+  cursor: pointer;
+  color: black;
+  display: flex;
+  border-radius: 5px;
+  border: 2.5px solid black;
+  padding: 2px;
+}
+.progress-bar {
+  background-color: black !important;
+  display: flex;
+}
+.progress-bar-label {
+  margin: auto;
+  font-size: 17px;
+}
+.home {
+  margin: auto;
+  font-size: 20px;
+  font-family: roboto;
+}
+.title {
+  text-align: center;
+  font-size: 62px;
+  padding: 30px;
+  margin-top: 0px;
+  font-family: mukta;
+}
+.bg-fake-sheet {
+  background: white;
+  opacity: 1;
+  margin: auto;
+  width: 91%;
+  border-radius: 15px;
+  margin-top: 33px;
+  margin-bottom: 33px;
+}
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.mainTwo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 50%;
+  align-items: center;
+  margin: 80px 0px;
+  font-size: 30px;
+}
+.input .formFirst {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.input input[type="file"] {
+  color: transparent;
+  display: none;
+}
+.upload {
+  font-size: 30px;
+  background: none;
+  border: none;
+  /* margin: 0px; */
+  /* padding: 7px; */
+  font-family: mukta;
+  color: black;
+  margin-left: 28px;
+}
+.wrap {
+  display: flex;
+  justify-content: center;
+}
+.groupPiano {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-family: mukta;
+}
+.sheetUp {
+  margin-left: 17px;
+}
+.loader {
+  border: 22px solid #f3f3f3; /* Light grey */
+  border-top: 22px solid black; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  position: fixed;
+  left: 45%;
+  right: 45%;
+  display: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.bg-fake {
+  background: white;
+  opacity: 0.8;
+  margin: auto;
+  width: 91%;
+  border-radius: 15px;
+}
+.groupPiano .majorScale {
+  text-decoration: none;
+}
+.firstImgs {
+  width: 150px;
+}
+
+.form {
+  margin-top: 20px;
+}
+
+#content {
+  width: 70%;
+}

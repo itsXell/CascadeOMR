@@ -1,0 +1,95 @@
+.sheetPaper {
+  display: flex;
+}
+.nextSheet {
+  margin: auto auto 20px auto;
+}
+.sheetPaper .sheetInnerPp {
+  margin: 15px auto;
+  width: 100%;
+}
+.next-skin {
+  width: 174px;
+}
+.pre-skin {
+  width: 182px !important;
+}
+.prev-sheet {
+  padding: 20px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.arr {
+  width: 41px;
+  cursor: pointer;
+  margin: auto;
+}
+.down-arr {
+  width: 38px !important;
+}
+.backInner {
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.next-sheet {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 24px;
+}
+a.f.next-sheet {
+  margin: auto 20px 10px 20px;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 14px;
+}
+.download {
+  margin: auto;
+  color: black;
+  font-size: 20px;
+}
+#dAll {
+  display: flex;
+  margin: auto 20px 10px 20px;
+  padding: 7px;
+  border-radius: 15px;
+  border: 2px solid black;
+}
+.dAllLab {
+  font-size: 14px;
+  color: black;
+  text-align: right;
+}
+#dAll {
+  display: none;
+}
+.dAll {
+  display: flex;
+  flex-direction: row;
+  width: 130px;
+  border: 2px solid black;
+  position: absolute;
+  right: 80px;
+  border-radius: 5px;
+  font-size: 10px;
+  top: 60px;
+  padding: 2px;
+  padding-right: 5px;
+}
+.backNF {
+  display: flex;
+  flex-direction: column;
+}
+.progress {
+  margin: auto !important;
+  height: 41px !important;
+}
+.f {
+  display: flex;
+}
+.down {
+  width: 54px;
+}

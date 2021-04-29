@@ -1,0 +1,71 @@
+{%extends 'base.html'%} {% block body %}
+<script>
+  function loading() {
+    $("#loader").show();
+  }
+</script>
+<div class="major">
+  <div class="bg-fake-sheet major-sheet">
+    <a href="/" class="back">
+      <img
+        src="{{ url_for('static', filename='./img/app/home.png') }}"
+        alt="Back"
+        class="home-icon"
+      />
+      <div class="home">Home</div>
+    </a>
+    <div class="loader major-load" id="loader"></div>
+
+    <div class="title">Sheets</div>
+    <form method="post" action="/group" class="songGr">
+      <input
+        type="text"
+        class="search-txt"
+        name="songName"
+        id="songName"
+        placeholder="Song Name"
+      />
+      <input type="submit" value="Search" class="sub-song" />
+    </form>
+    <form method="post" action="/group" class="songGr level-gr">
+      <div class="sort sort-song-label">Difficulty:</div>
+      <div class="sortBox">
+        {{sheetList.form.level}}
+        <input type="submit" value="Sort" class="sub-song sort-song" />
+      </div>
+    </form>
+
+    <div id="wrapSheet">
+      {% for sheet in sheetList.onlyfiles%}
+      <a
+        class="sheetsList"
+        href="{{'/uploadComp/'+sheet.path }}"
+        onclick="loading();"
+      >
+        <div class="logo">
+          <img
+            src="{{ url_for('static', filename='./img/app/disc.png') }}"
+            alt="Back"
+            class="disc"
+          />
+        </div>
+        <div class="sheetName">
+          <div class="songT">{{sheet.name}}</div>
+          <div class="des">Scale: {{sheet.scale}} Major Scale</div>
+          <div class="des">Difficulty: {{sheet.level}}</div>
+        </div>
+      </a>
+      {%endfor%}
+    </div>
+
+    <div class="scales"></div>
+  </div>
+</div>
+<script>
+  var level = document.getElementById("level");
+  level.onchange = function () {
+    var a = level.value;
+    console.log(a);
+  };
+</script>
+{% endblock %}

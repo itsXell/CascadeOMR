@@ -1,0 +1,137 @@
+.scales {
+  padding: 70px;
+  display: grid;
+  /* justify-content: space-between; */
+  /* height: 500px; */
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+.major-load {
+  top: 45%;
+}
+.scales .scalesVal {
+  width: 200px;
+  background: #c95959;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  font-size: 30px;
+  border-radius: 10px;
+}
+.major-sheet {
+  background: rgba(255, 255, 255, 0.9);
+}
+.sheetsList {
+  display: flex;
+  background: white;
+  opacity: 1;
+  border: 1px solid black;
+  padding: 16px;
+  margin: 24px;
+  border-radius: 11px;
+}
+.logo {
+  display: flex;
+  margin: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#songName {
+  padding: 12px;
+  font-size: 22px;
+  width: 80%;
+  border-radius: 10px 0px 0px 10px;
+  border: 1px solid black;
+  text-transform: capitalize;
+  font-family: open sans-serif;
+}
+.level-gr {
+  display: flex;
+  flex-direction: column;
+  margin-top: 11px;
+}
+.sort {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 350;
+}
+.sortBox {
+  margin-right: auto;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 19px;
+  font-weight: 350;
+}
+.sheet-bk {
+  width: 131px !important;
+}
+#level {
+  width: 65%;
+  border-radius: 10px 0px 0px 10px;
+  border: 1px solid black;
+  background: white;
+  padding: 7px;
+  font-weight: 350;
+}
+.dropdown-menu-toggle {
+  font-size: 20px;
+}
+.sort-song {
+  width: 36% !important;
+  margin-left: 0px !important;
+  padding: 11px !important;
+}
+.sort-song-label {
+  padding: 0px !important;
+  margin-top: 15px;
+  margin-bottom: 4px;
+  font-weight: 400;
+}
+.songGr {
+  text-align: center;
+  display: flex;
+  width: 95%;
+  margin: auto;
+}
+.sub-song {
+  width: 20%;
+  font-size: 18px;
+  color: white;
+  background: black;
+  border: none;
+  border-radius: 0px 10px 10px 0px;
+  padding: 8px;
+}
+.disc {
+  width: 70px;
+}
+.sheetName {
+  margin-left: 18px;
+}
+.songT {
+  color: black;
+  font-weight: bold;
+  font-size: 24px;
+  font-family: open sans-serif;
+}
+.des {
+  font-family: open sans-serif;
+  color: darkgray;
+  font-weight: lighter;
+  font-size: 17px;
+}
+.scales .scalesVal:hover {
+  width: 200px;
+  background: #eebc0b;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  font-size: 30px;
+  border-radius: 10px;
+}

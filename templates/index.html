@@ -1,0 +1,40 @@
+{%extends 'base.html'%} {% block head %} {% endblock %} {% block body %}
+
+<script>
+  //$("#file").change(function() { this.form.submit(); });
+
+  function loading(){
+    $("#loader").show();
+
+    document.forms['myform'].submit()
+  }
+  function choseImg(){
+    document.getElementById('file').click();
+    
+    return false;
+  }
+</script>
+<div class="content">
+  <div class="bg-fake">
+    <h1 class="title">Piano </h1>
+    <div class="loader"id="loader"></div>
+    <div class="mainTwo">
+      <div class="groupPiano">
+        <a class="majorScale" href="/group">
+          <img src="static/img/app/piano.png" alt=""class="firstImgs"/>
+        </a>
+        Sheets
+      </div>
+      <div class="input" >
+        <form method="POST"  id ="myform" action="/upload" enctype=multipart/form-data class="formFirst">
+          <div for="file-input" class="wrap">
+            <img src="static/img/app/upload.png" onclick="choseImg();" class="firstImgs sheetUp"/>
+          </div>
+          <input type="file" name="file" onchange="loading()" accept="image/" id="file"  multiple>
+          <input type=submit value=Upload class="upload" id="upload" disabled   >
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{%endblock %}
