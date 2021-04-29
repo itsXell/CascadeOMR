@@ -20,6 +20,7 @@ Before (Upper) and After (Lower) the extraction.
 ## 3. Music Notation Detection
 In this project, we will focus on 7 musical notation which is the target object to detect.
 
+![Screenshot (184)](https://user-images.githubusercontent.com/49471123/116567670-0a3a8b80-a932-11eb-9014-8da0908adf69.png)
 
 In training cascade classifiers, we need several hundred positive sample and negative images of the same size.
 For the size of positive images in each classifier training, we recommended setting it equally. For example, the size of quarter note head positive image is 32 x 32 pixel, so make sure that the size of the quarter note head’s positive images are the same size. But not all sizes of positive images of these seven classifiers must set to be equal. For instance, the size of the quarter note head’s positive images is 32 x 32 pixels, while treble clef’s positive images are 40 x 100 pixels. The reason that the size of positive images in each classifier are recommended to set equal because once we train for the classifier, all positive images of the current training classifier are set to be the same, so if the size of the positive images of the current classifier are different it will resize them, this cause change to the aspect ratio of the images. The size of negative images is recommended to be bigger than the positive image. 
