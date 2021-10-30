@@ -1,5 +1,6 @@
 # Cascade OMR
 Cascade OMR is an Optical Music Recognition System using Cascade Classifier to detect the musical notation. 
+Read the project detail in our research paper at: https://ieeexplore.ieee.org/document/9493818
 
 # Description
 In this project, we explore techniques and algorithms to implement optical music recognition. This paper aims to encourage people who just begin and enjoy learning object detection by using a simple and comprehensible framework called Haar-like Feature to detect the music notation and generate musical alphabets to assist those who have a difficult time in memorizing it. The paper will include the process of how to generate the cascade classifier model and how to imply them to detect the target object.
